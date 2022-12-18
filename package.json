@@ -12,7 +12,7 @@
     "url": "git+https://github.com/hamsterTears/frontend-project-44.git"
   },
   "keywords": [
-    "DeutschlandKVS"
+    "project"
   ],
   "author": "Pushkina",
   "license": "ISC",
@@ -20,11 +20,7 @@
     "url": "https://github.com/hamsterTears/frontend-project-44/issues"
   },
   "homepage": "https://github.com/hamsterTears/frontend-project-44#readme",
-  "dependencies": {
-    "enot": "^2.0.8"
-  },
   "bin": {
     "brain-games": "bin/brain-games.js"
   }
-
 }
