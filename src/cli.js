@@ -1,11 +1,10 @@
-/* eslint-disable no-redeclare */
-/* eslint-disable no-console */
 import readlineSync from 'readline-sync';
 
-const greeting = (userName) => {
-  // eslint-disable-next-line no-var
-  var userName = readlineSync.question('May I have your name? ');
+const greeting = () => {
+  // eslint-disable-next-line no-var, no-redeclare
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
+  return userName;
 };
 
-export default greeting;
+export default greeting();
