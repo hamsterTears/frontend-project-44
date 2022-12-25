@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // eslint-disable-next-line import/extensions
+// eslint-disable-next-line no-console
 import greeting from '../src/cli.js';
 
-// eslint-disable-next-line no-console
-console.log('Welcome to the Brain Games!');
-greeting();
+// eslint-disable-next-line no-unused-expressions
+greeting;
