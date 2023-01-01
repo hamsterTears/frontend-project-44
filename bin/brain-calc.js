@@ -1,4 +1,6 @@
-import calcGame from '../src/brain-calc-games.js';
+#!/usr/bin/env node
+
+import calcGame from '../src/games/brain-calc-games.js';
 
 // eslint-disable-next-line no-unused-expressions
-calcGame;
+calcGame();
