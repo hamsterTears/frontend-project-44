@@ -2,4 +2,5 @@
 
 import greeting from '../src/cli.js';
 
-greeting();
+// eslint-disable-next-line no-unused-expressions
+greeting;
