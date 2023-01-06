@@ -17,7 +17,7 @@ const getAnswer = () => {
   const indexOfHiddenCount = Math.floor(Math.random() * 8);
   const expectedAnswer = progression[indexOfHiddenCount];
   progression[indexOfHiddenCount] = '..';
-  const question = progression.join(' ');
+  const question = `Question: ${progression.join(' ')}`;
   console.log(question);
   return expectedAnswer;
 };

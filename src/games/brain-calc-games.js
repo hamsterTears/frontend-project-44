@@ -6,7 +6,7 @@ const getTask = () => {
   const randomCount2 = Math.floor(Math.random() * 10) + 1;
   const arr = ['+', '-', '*'];
   const randomOperator = arr[Math.floor(Math.random() * arr.length)];
-  console.log(`${randomCount1}${randomOperator}${randomCount2}`);
+  console.log(`Question: ${randomCount1} ${randomOperator} ${randomCount2}`);
   return [randomCount1, randomCount2, randomOperator];
 };
 
