@@ -3,7 +3,8 @@ import logicGame from '../index.js';
 
 const getAnswer = () => {
   const randomCount = Math.floor(Math.random() * 100) + 1;
-  console.log(`Question: ${randomCount}`);
+  const question = `Question: ${randomCount}`;
+  console.log(question);
   if (((randomCount > 1) && (randomCount % randomCount === 0))
   && ((randomCount % 2 !== 0) || (randomCount === 2))) {
     return 'yes';
