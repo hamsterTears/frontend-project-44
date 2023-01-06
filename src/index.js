@@ -14,6 +14,7 @@ const logicGame = (description, getAnswer) => {
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${expectedAnswer}'.`);
       console.log(`"Let's try again, ${name}!"`);
+      return correctAnswers === 3;
     }
   } return console.log(`'Congratulations, ${name}!'`);
 };
