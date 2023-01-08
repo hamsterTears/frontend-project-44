@@ -1,21 +1,22 @@
 /* eslint-disable consistent-return */
 import logicGame from '../index.js';
 
-const getAnswer = () => {
+const getTask = () => {
   const randomCount = Math.floor(Math.random() * 100) + 1;
-  const question = `Question: ${randomCount}`;
-  console.log(question);
+  const task = (`Question: ${randomCount}`);
   if (((randomCount > 1) && (randomCount % randomCount === 0))
   && ((randomCount % 2 !== 0) || (randomCount === 2))) {
-    return 'yes';
+    const expectedAnswer = 'yes';
+    return [task, expectedAnswer];
   } if ((randomCount % 2 === 0) && (randomCount !== 2)) {
-    return 'no';
+    const expectedAnswer = 'no';
+    return [task, expectedAnswer];
   }
 };
 
 const isPrime = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  logicGame(description, getAnswer);
+  logicGame(description, getTask);
 };
 isPrime();
 export default isPrime;

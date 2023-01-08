@@ -1,12 +1,13 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-const logicGame = (description, getAnswer) => {
+const logicGame = (description, getTask) => {
   console.log(description);
   let correctAnswers = 0;
   const name = greeting;
   while (correctAnswers < 3) {
-    const expectedAnswer = getAnswer();
+    const [task, expectedAnswer] = getTask();
+    console.log(task);
     const answer = readlineSync.question('Your answer: ').toLowerCase();
     if (String(answer) === String(expectedAnswer)) {
       console.log('Correct!');

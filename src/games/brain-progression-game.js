@@ -12,19 +12,18 @@ const getProgression = () => {
   } return arr;
 };
 
-const getAnswer = () => {
+const getTask = () => {
   const progression = getProgression();
   const indexOfHiddenCount = Math.floor(Math.random() * 8);
   const expectedAnswer = progression[indexOfHiddenCount];
   progression[indexOfHiddenCount] = '..';
-  const question = `Question: ${progression.join(' ')}`;
-  console.log(question);
-  return expectedAnswer;
+  const task = `Question: ${progression.join(' ')}`;
+  return [task, expectedAnswer];
 };
 
 const progression = () => {
   const description = 'What number is missing in the progression?';
-  logicGame(description, getAnswer);
+  logicGame(description, getTask);
 };
 progression();
 export default progression;
