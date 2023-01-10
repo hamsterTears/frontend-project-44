@@ -1,5 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-unused-expressions */
 import isPrime from '../src/games/brain-prime-game.js';
 
-// eslint-disable-next-line no-unused-expressions
 isPrime;
