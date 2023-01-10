@@ -43,6 +43,5 @@ const calcGame = () => {
   const description = 'What is the result of the expression?';
   logicGame(description, getTask);
 };
-export default calcGame;
 
-calcGame();
+export default calcGame;
