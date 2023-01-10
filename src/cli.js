@@ -7,4 +7,4 @@ const greeting = () => {
   return userName;
 };
 
-export default greeting();
+export default greeting;
