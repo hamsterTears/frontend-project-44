@@ -16,5 +16,3 @@ const gcd = () => {
 };
 
 export default gcd;
-
-gcd();
