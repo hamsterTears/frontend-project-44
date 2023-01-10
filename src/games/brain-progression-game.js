@@ -8,7 +8,6 @@ const getProgression = () => {
   for (let i = 0; i < 8; i += 1) {
     start += randomCount2;
     arr.push(start);
-  // eslint-disable-next-line no-undef
   } return arr;
 };
 
@@ -25,5 +24,5 @@ const progression = () => {
   const description = 'What number is missing in the progression?';
   logicGame(description, getTask);
 };
-progression();
+
 export default progression;

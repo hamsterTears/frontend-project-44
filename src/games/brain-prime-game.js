@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 import logicGame from '../index.js';
 
 const getTask = () => {
@@ -11,7 +10,7 @@ const getTask = () => {
   } if ((randomCount % 2 === 0) && (randomCount !== 2)) {
     const expectedAnswer = 'no';
     return [task, expectedAnswer];
-  }
+  } return task;
 };
 
 const isPrime = () => {
