@@ -18,7 +18,5 @@ const isPrime = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   logicGame(description, getTask);
 };
-
-export default isPrime;
-
 isPrime();
+export default isPrime;
