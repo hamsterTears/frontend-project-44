@@ -14,5 +14,7 @@ const gcd = () => {
   const description = 'Find the greatest common divisor of given numbers.';
   logicGame(description, getTask);
 };
-gcd();
+
 export default gcd;
+
+gcd();
