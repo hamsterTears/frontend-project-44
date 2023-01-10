@@ -20,5 +20,3 @@ const isPrime = () => {
 };
 
 export default isPrime;
-
-isPrime();
