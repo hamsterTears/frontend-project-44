@@ -19,4 +19,3 @@ const evenGame = () => {
 };
 
 export default evenGame;
-evenGame();
