@@ -5,12 +5,24 @@
 
 <a href="https://codeclimate.com/github/hamsterTears/frontend-project-44/test_coverage"><img src="https://api.codeclimate.com/v1/badges/c5aae52b2f3f989245e0/test_coverage" /></a>
 
-Brain-even:  https://asciinema.org/a/ab2fKECbnBmnewn8R4VHf8lC3
+Node.js v19.3.0
 
-Brain-calc:  https://asciinema.org/a/Nt6JGFrrNIEWQYxTZnuKYH173
+install npm: install
+             (sudo) npm link
+            
+Launch games:
+       brain-even
+       brain-calc
+       brain-gcd
+       brain-progression
+       brain-prime
 
-Brain-gcd:   https://asciinema.org/a/549170
+Brain-even:  https://asciinema.org/a/551611
 
-Brain-progression:  https://asciinema.org/a/549295
+Brain-calc:  https://asciinema.org/a/551613
 
-Brain-prime:  https://asciinema.org/a/549500
+Brain-gcd:   https://asciinema.org/a/551616
+
+Brain-progression:  https://asciinema.org/a/551622
+
+Brain-prime:  https://asciinema.org/a/551624
