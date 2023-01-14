@@ -8,13 +8,18 @@
 Node.js v19.3.0
 
 install npm: install
+
              (sudo) npm link
             
 Launch games:
        brain-even
+
        brain-calc
+
        brain-gcd
+
        brain-progression
+       
        brain-prime
 
 Brain-even:  https://asciinema.org/a/551611
