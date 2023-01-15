@@ -1,8 +1,9 @@
 /* eslint-disable consistent-return */
-import logicGame from '../index.js';
+import runLogicGame from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 const getTask = () => {
-  const randomCount = Math.floor(Math.random() * 100) + 1;
+  const randomCount = getRandomNumber();
   const task = `Question: ${randomCount}`;
   if (randomCount % 2 === 0) {
     const expectedAnswer = 'yes';
@@ -15,7 +16,7 @@ const getTask = () => {
 
 const evenGame = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no"';
-  logicGame(description, getTask);
+  runLogicGame(description, getTask);
 };
 
 export default evenGame;

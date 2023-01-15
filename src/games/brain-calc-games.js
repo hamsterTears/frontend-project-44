@@ -1,9 +1,10 @@
 /* eslint-disable consistent-return */
-import logicGame from '../index.js';
+import runLogicGame from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 const getTask = () => {
-  const randomCount1 = Math.floor(Math.random() * 10) + 1;
-  const randomCount2 = Math.floor(Math.random() * 10) + 1;
+  const randomCount1 = getRandomNumber();
+  const randomCount2 = getRandomNumber();
   const arr = ['+', '-', '*'];
   const randomOperator = arr[Math.floor(Math.random() * arr.length)];
   const task = (`Question: ${randomCount1} ${randomOperator} ${randomCount2}`);
@@ -39,9 +40,9 @@ const getTask = () => {
 //   }
 // };
 
-const calcGame = () => {
+const startCalcGame = () => {
   const description = 'What is the result of the expression?';
-  logicGame(description, getTask);
+  runLogicGame(description, getTask);
 };
 
-export default calcGame;
+export default startCalcGame;

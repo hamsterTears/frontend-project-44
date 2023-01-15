@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
 import greeting from './cli.js';
 
-const logicGame = (description, getTask) => {
+const runLogicGame = (description, getTask) => {
   const userName = greeting();
   console.log(description);
   let correctAnswers = 0;
@@ -19,4 +19,4 @@ const logicGame = (description, getTask) => {
     }
   } return console.log(`'Congratulations, ${userName}!'`);
 };
-export default logicGame;
+export default runLogicGame;

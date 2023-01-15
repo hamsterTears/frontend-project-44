@@ -1,7 +1,8 @@
-import logicGame from '../index.js';
+import runLogicGame from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 const getTask = () => {
-  const randomCount = Math.floor(Math.random() * 100) + 1;
+  const randomCount = getRandomNumber();
   const task = (`Question: ${randomCount}`);
   if (randomCount < 2) {
     const expectedAnswer = 'no';
@@ -20,7 +21,7 @@ const getTask = () => {
 
 const isPrime = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-  logicGame(description, getTask);
+  runLogicGame(description, getTask);
 };
 
 export default isPrime;

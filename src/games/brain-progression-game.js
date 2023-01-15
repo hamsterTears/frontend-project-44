@@ -1,8 +1,9 @@
-import logicGame from '../index.js';
+import runLogicGame from '../index.js';
+import getRandomNumber from '../randomNumber.js';
 
 const getProgression = () => {
-  const randomCount1 = Math.floor(Math.random() * 10) + 1;
-  const randomCount2 = Math.floor(Math.random() * 10) + 1;
+  const randomCount1 = getRandomNumber();
+  const randomCount2 = getRandomNumber();
   let start = randomCount1;
   const arr = [];
   for (let i = 0; i < 8; i += 1) {
@@ -22,7 +23,7 @@ const getTask = () => {
 
 const progression = () => {
   const description = 'What number is missing in the progression?';
-  logicGame(description, getTask);
+  runLogicGame(description, getTask);
 };
 
 export default progression;
