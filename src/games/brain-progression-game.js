@@ -2,8 +2,8 @@ import runLogicGame from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
 const getProgression = () => {
-  const randomCount1 = getRandomNumber();
-  const randomCount2 = getRandomNumber();
+  const randomCount1 = getRandomNumber(0, 10);
+  const randomCount2 = getRandomNumber(0, 10);
   let start = randomCount1;
   const arr = [];
   for (let i = 0; i < 8; i += 1) {
