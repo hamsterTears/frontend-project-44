@@ -4,8 +4,8 @@ import getRandomNumber from '../randomNumber.js';
 const getGcd = (x, y) => (y === 0 ? x : getGcd(y, x % y));
 
 const getTask = () => {
-  const randomCount1 = getRandomNumber();
-  const randomCount2 = getRandomNumber();
+  const randomCount1 = getRandomNumber(0, 50);
+  const randomCount2 = getRandomNumber(0, 50);
   const task = `Question: ${randomCount1} ${randomCount2}`;
   const expectedAnswer = getGcd(randomCount1, randomCount2);
   return [task, expectedAnswer];
