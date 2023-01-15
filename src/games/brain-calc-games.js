@@ -2,43 +2,31 @@
 import runLogicGame from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
+const calculate = (num1, operator, num2) => {
+  let result;
+  // eslint-disable-next-line default-case
+  switch (operator) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+  } return result;
+};
+
 const getTask = () => {
-  const randomCount1 = getRandomNumber();
-  const randomCount2 = getRandomNumber();
+  const randomCount1 = getRandomNumber(0, 50);
+  const randomCount2 = getRandomNumber(0, 50);
   const arr = ['+', '-', '*'];
   const randomOperator = arr[Math.floor(Math.random() * arr.length)];
   const task = (`Question: ${randomCount1} ${randomOperator} ${randomCount2}`);
-  if (randomOperator === '+') {
-    // eslint-disable-next-line no-unused-vars, no-const-assign
-    const expectedAnswer = (randomCount1 + randomCount2);
-    return [task, expectedAnswer];
-  } if (randomOperator === '-') {
-    const expectedAnswer = (randomCount1 - randomCount2);
-    return [task, expectedAnswer];
-  } if (randomOperator === '*') {
-    const expectedAnswer = (randomCount1 * randomCount2);
-    return [task, expectedAnswer];
-  }
+  const expectedAnswer = calculate(randomCount1, randomOperator, randomCount2);
+  return [task, expectedAnswer];
 };
-
-// const getAnswer = () => {
-
-//   const [randomCount1, randomCount2, randomOperator] = getTask();
-//   if (randomOperator === '+') {
-//     // eslint-disable-next-line no-unused-vars, no-const-assign
-//     const expectedAnswer = (randomCount1 + randomCount2);
-//     console.log(expectedAnswer);
-//     return expectedAnswer;
-//   } if (randomOperator === '-') {
-//     const expectedAnswer = (randomCount1 - randomCount2);
-//     console.log(expectedAnswer);
-//     return expectedAnswer;
-//   } if (randomOperator === '*') {
-//     const expectedAnswer = (randomCount1 * randomCount2);
-//     console.log(expectedAnswer);
-//     return expectedAnswer;
-//   }
-// };
 
 const startCalcGame = () => {
   const description = 'What is the result of the expression?';
