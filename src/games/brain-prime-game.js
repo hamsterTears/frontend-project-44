@@ -1,21 +1,22 @@
 import runLogicGame from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
+const isCountPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i < num; i += 1) {
+    if (num % i === 0) {
+      return false;
+    }
+  };
+  return true;
+};
+
 const getTask = () => {
   const randomCount = getRandomNumber();
   const task = (`Question: ${randomCount}`);
-  if (randomCount < 2) {
-    const expectedAnswer = 'no';
-    return [task, expectedAnswer];
-  }
-  for (let i = 2; i < randomCount; i += 1) {
-    if (randomCount % i === 0) {
-      const expectedAnswer = 'no';
-      return [task, expectedAnswer];
-    }
-  }
-
-  const expectedAnswer = 'yes';
+  const expectedAnswer = (isCountPrime(randomCount)) ? 'yes' : 'no';
   return [task, expectedAnswer];
 };
 

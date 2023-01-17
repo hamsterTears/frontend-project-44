@@ -13,11 +13,6 @@ const getTask = () => {
   const randomCount = getRandomNumber();
   const task = `Question: ${randomCount}`;
   const expectedAnswer = (isEven(randomCount)) ? 'yes' : 'no';
-  // if (randomCount % 2 === 0) {
-  //   const expectedAnswer = 'yes';
-  //   return [task, expectedAnswer];
-  // } if (randomCount % 2 !== 0) {
-  //   const expectedAnswer = 'no';
   return [task, expectedAnswer];
 };
 
