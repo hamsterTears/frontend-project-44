@@ -3,26 +3,23 @@ import runLogicGame from '../index.js';
 import getRandomNumber from '../randomNumber.js';
 
 const calculate = (num1, operator, num2) => {
-  let result;
-  // eslint-disable-next-line default-case
   switch (operator) {
     case '+':
-      result = num1 + num2;
-      break;
+      return (num1 + num2);
     case '-':
-      result = num1 - num2;
-      break;
+      return (num1 - num2);
     case '*':
-      result = num1 * num2;
-      break;
-  } return result;
+      return (num1 * num2);
+    default:
+      throw new Error(' error !');
+  }
 };
 
 const getTask = () => {
   const randomCount1 = getRandomNumber(0, 50);
   const randomCount2 = getRandomNumber(0, 50);
   const arr = ['+', '-', '*'];
-  const randomOperator = arr[Math.floor(Math.random() * arr.length)];
+  const randomOperator = arr[getRandomNumber(0, 2)];
   const task = (`Question: ${randomCount1} ${randomOperator} ${randomCount2}`);
   const expectedAnswer = calculate(randomCount1, randomOperator, randomCount2);
   return [task, expectedAnswer];
